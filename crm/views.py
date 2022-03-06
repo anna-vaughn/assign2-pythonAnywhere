@@ -121,7 +121,7 @@ def product_new(request):
 
 @login_required
 def product_edit(request, pk):
-    product = get_object_or_404(Service, pk=pk)
+    product = get_object_or_404(Product, pk=pk)
     if request.method == "POST":
         form = ProductForm(request.POST, instance=product)
         if form.is_valid():
